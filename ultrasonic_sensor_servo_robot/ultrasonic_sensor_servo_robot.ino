@@ -1,4 +1,4 @@
-#include <NewPing.h>
+#include <NewPing.h> //NewPing_v1.8
 #include <Servo.h>
 
 #define TRIGGER_PIN 9
