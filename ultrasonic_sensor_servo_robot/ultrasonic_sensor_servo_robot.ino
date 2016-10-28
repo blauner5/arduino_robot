@@ -48,4 +48,3 @@ void indietro(){
   servo1.writeMicroseconds(1000); //back first servo
   servo2.writeMicroseconds(1000); //back second servo
 }
-
