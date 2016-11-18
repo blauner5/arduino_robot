@@ -38,30 +38,9 @@ void loop() {
   delay(100);
 }
 
-void alt(){
-  servo_left.writeMicroseconds(1500); //stop function servo
-  servo_right.writeMicroseconds(1500);
-}
-
-
 void forward(){
   servo_left.writeMicroseconds(2500); //forward first servo
   servo_right.writeMicroseconds(2500);
-}
-
-void turnleft () {
-  servo_left.writeMicroseconds(2500);    //correct the direction<----------------
-  servo_right.writeMicroseconds(2500);   //correct the direction
-  delay(1000);
-  alt();
-  return;
-}
-
-void turnright () {
-  servo_left.writeMicroseconds(2500);    //correct the direction<----------------
-  servo_right.writeMicroseconds(2500);   //correct the direction
-  delay(1000);
-  alt();
   return;
 }
 
@@ -77,6 +56,12 @@ void findroute(){
   }
 }
 
+void alt(){
+  servo_left.writeMicroseconds(1500); //stop function servo
+  servo_right.writeMicroseconds(1500);
+  delay(500);
+  return;
+}
 
 //functions to find the correct direction
 void lookleft() {
@@ -97,3 +82,19 @@ void lookright () {
   return;
 }
 // end function
+
+void turnleft () {
+  servo_left.writeMicroseconds(2500);    //correct the direction<----------------
+  servo_right.writeMicroseconds(2500);   //correct the direction
+  delay(1000);
+  alt();
+  return;
+}
+
+void turnright () {
+  servo_left.writeMicroseconds(2500);    //correct the direction<----------------
+  servo_right.writeMicroseconds(2500);   //correct the direction
+  delay(1000);
+  alt();
+  return;
+}
